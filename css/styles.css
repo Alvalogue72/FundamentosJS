@@ -9,15 +9,15 @@
 /*                                 FONTS                                 */
 /*************************************************************************/
 
-/* @font-face {font-family: titulos;
-    src: url(../fonts/Arvo-Regular.ttf);}
+ @font-face {font-family: titulos;
+    src: url(../font/RobotoMono-Regular.ttf);}
   
 @font-face {font-family: textonormal;
-    src: url(../fonts/Lato-Regular.ttf);}
+    src: url(../font/RobotoSerif-Regular.ttf);}
   
-body {font-family: textonormal}
+p, a {font-family: textonormal}
   
- h1, h2, h3, h4, h5, h6 {font-family: titulos;} */
+ h1, h2, h3, h4, h5, h6 {font-family: titulos;}
  
 /*************************************************************************/
 /*                                COLORS                                 */
@@ -99,8 +99,7 @@ header {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
 /***************************************************************************/
 /*                                  NAVBAR                                 */
 /***************************************************************************/
-
-
+nav {background-color: #212121;}
 /***************************************************************************/
 /*                                  FOOTER                                 */
 /***************************************************************************/
