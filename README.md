@@ -27,3 +27,9 @@
 
 <h3>Bootstrap Components</h3>
 <a href ="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works"><p>NavBar from bootstrap</p></a>
+
+<h3 id="snippets">Code snippets</h3>
+<p>I have used the following:</p>
+<ul>
+  <li>Buttons: from <a href="https://uiverse.io/all?search=button">uiverse.io.</a> </li>
+</ul>
