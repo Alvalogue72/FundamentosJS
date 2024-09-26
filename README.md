@@ -4,7 +4,6 @@
 <ul>
   <li><a href="#introduccion">Introduction</a></li>
   <li><a href="#descripcion">Description</a></li>
-  <li><a href="#estructura">Structure</a></li>
   <li><a href="#estilo">Style</a></li>
 </ul>
 
@@ -24,6 +23,10 @@
   <li>#FFD600</li>
   <li>#EEEEEE</li>
 </ul>
+
+<h3>Fonts</h3>
+<p>For the titles: Roboto Mono.</p>
+<p>For the body text: Roboto Serif.</p>
 
 <h3>Bootstrap Components</h3>
 <a href ="https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works"><p>NavBar from bootstrap</p></a>
