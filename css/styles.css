@@ -1,68 +1,45 @@
-/***************************************************************************/
-/*                          Style sheet                                    */
-/*                          author: Álvaro López                           */
-/*                          version: 1.0                                   */
-/*                          comments: class proyect 2024-25                */
-/***************************************************************************/
-
-/*************************************************************************/
-/*                                 FONTS                                 */
-/*************************************************************************/
-
+/***********************    FONTS    ***********************/
  @font-face {font-family: titulos;
     src: url(../font/RobotoMono-Regular.ttf);}
   
 @font-face {font-family: textonormal;
     src: url(../font/RobotoSerif-Regular.ttf);}
-  
-p, a {font-family: textonormal}
-  
- h1, h2, h3, h4, h5, h6 {font-family: titulos;}
+
+.ff-robotobody {font-family: textonormal;}
+h1, h2, h3, h4, h5, h6 {font-family: titulos;}
  
-/*************************************************************************/
-/*                                COLORS                                 */
-/*************************************************************************/
+/***********************    COLORS    ***********************/
+:root {
+    --darkgrey: #212121;
+    --lightgrey: #393E46;
+    --yellowjs: #FFD600;
+    --mywhite: #EEEEEE;}
 
-/* MY PALETTE COLOR */
-/* #222831
-#393E46
-#FFD600
-#EEEEEE */
+.bg-darkgrey {background-color: var(--darkgrey);}
+.bg-lightgrey {background-color: var(--lightgrey);}
+.bg-yellowjs {background-color: var(--yellowjs)!important;}
+.text-mywhite {color: var(--mywhite);}
 
-.bg-darkgrey {background-color: #212121;}
-.bg-lightgrey {background-color: #393E46;}
-
-.text-mywhite {color: #EEEEEE;}
-
-/*************************************************************************/
-/*                                SIZING                                 */
-/*************************************************************************/
-
+/***********************    SIZING    ***********************/
 .w-50p {width: 50px;}
 .w-70p {width: 70px;}
 .w-18rem {width: 18rem;}
-
 .fs-8{font-size: 0.8em;} 
 
-
-/*************************************************************************/
-/*                              ANIMATIONS                               */
-/*************************************************************************/
-
+/***********************  ANIMATIONS  ***********************/
 .zoom {transition: transform .5s;}
 .zoom:hover {transform: scale(1.05);}
 
 .zoom2 {transition: transform .5s;}
 .zoom2:hover {transform: scale(1.1);}
 
-/****************** Button Style (from uiverse.io) *****************/
-
+/*************** Button Style (from uiverse.io) **************/
 .button {cursor: pointer;
     position: relative;
     padding: 10px 24px;
     font-size: 0.7em;
     color: black;
-    border: 2px solid #FFD600;
+    border: 2px solid var(--yellowjs);
     border-radius: 34px;
     background-color: transparent;
     font-weight: 600;
@@ -79,40 +56,27 @@ p, a {font-family: textonormal}
     border-radius: inherit;
     scale: 0;
     z-index: -1;
-    background-color: #FFD600;
+    background-color: var(--yellowjs);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);}
 
 .button:hover::before { scale: 3;}
 
-.button:hover {color: #212121;
+.button:hover {color: var(--darkgrey);
     scale: 1.1;
     box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);}
 
 .button:active {scale: 1;}
 
-/***************************************************************************/
-/*                                  HEADER                                 */
-/***************************************************************************/
-
+/***********************    HEADER    ***********************/
 header {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
 
-/***************************************************************************/
-/*                                  NAVBAR                                 */
-/***************************************************************************/
+/***********************    NAVBAR    ***********************/
+nav {background-color: var(--darkgrey);}
 
-nav {background-color: #212121;}
+/***********************    FOOTER    ***********************/
+footer {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
 
-/***************************************************************************/
-/*                                   MAIN                                  */
-/***************************************************************************/
-
-/***************************************************************************/
-/*                                  FOOTER                                 */
-/***************************************************************************/
-
-footer .fa-github {background-color: black;
+.fa-github {background-color: black;
     border: solid 1px #444;}
     
-footer .fa-linkedin-square {background-color: #0A66C2;}
-
-footer {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
+.fa-linkedin-square {background-color: #0A66C2;}
