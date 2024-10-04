@@ -1,58 +1,77 @@
-"use strict"
+"use strict";
 
-const defaultUsername = "usuario";
-const defaultPassword = "1234";
+// Credenciales almacenadas
+const storedUsername = "usuario";
+const storedPassword = "1234";
 
-function requestCredentials() {
+// Referencias a los elementos del DOM
+const submitButton = loginForm.querySelector('input[type="submit"]');
+const inputUsername = document.getElementById("username");
+const inputPassword = document.getElementById("password");
+const loginMessage = document.getElementById("loginMessage");
+const userHelp = document.getElementById("userHelp");
+const passwordHelp = document.getElementById("passwordHelp");
+
+// Evento que maneja el formulario
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     
-    const username = prompt("Ingrese su nombre de usuario, por favor.", "usuario") ;
+    const valueUsername = inputUsername.value.trim();
+    const valuePassword = inputPassword.value.trim();
     
-    if (!validateUsername(username)) {
-
-        alert("El nombre de usuario debe tener al menos 3 caracteres alfanuméricos.");
-        tryAgain();
-    
-    }  else {
-
-        const password = prompt("Ingrese su contraseña, por favor.", "1234");
-        
-        if (password === null) {
-            alert("Acceso cancelado");
-            tryAgain();
-        } else {
-            authenticate(username, password);
-        } 
+    if (!validateUsername(valueUsername)) {
+        userHelp.className = "form-text text-danger d-block";
+        return;
     }
-    
 
-}
+    if (!validatePassword(valuePassword)) {
+        passwordHelp.className = "form-text text-danger d-block";
+        return;
+    }
+
+    if (storedUsername === valueUsername && storedPassword === valuePassword) {
+
+        displayMessage("¡Bienvenido! &#128512", "green");
+        
+        setTimeout(() => {
+            document.getElementById("login").className = "d-none";
+            document.getElementById("navbar").className = "navbar navbar-expand-lg text-mywhite d-flex"
+            document.getElementById("mainContent").className = "container my-5 d-flex justify-content-center flex-wrap gap-4"
+        }, 2000);
+        
+    } else {
+        displayMessage("Credenciales incorrectas, acceso denegado", "red");
+    }
+});
 
 // Valida el usuario que debe contener al menos 3 caracteres alfanuméricos
 function validateUsername(username) {
-    const myRegex = /^\w{3,}$/;
+    const myRegex = /^\w{3,30}$/;
     return myRegex.test(username) && username !== null;
 }
 
-// Autentica las credenciales y muestra el contenido oculto
-function authenticate(username, password) {
-    if (username === defaultUsername && password === defaultPassword) {
-        alert("Bienvenido " + username);
-        document.getElementById("mainContent").className = "container my-5 d-flex justify-content-center flex-wrap gap-4";
-    } else {
-        alert("Usuario o contraseña incorrectos.");
-        tryAgain();
-    }
+// Valida la contraseña que debe contener al menos 4 caracteres
+function validatePassword(password) {
+    return password.length >= 4;
 }
 
-// Pregunta si se desea intentar de nuevo
-function tryAgain() {
-    const tryAgain = confirm("¿Desea intentarlo de nuevo?") ;
-    if (tryAgain) {
-        location.reload() ;
-    } else {
-        alert("Acceso denegado")
-    }
+// Muestra mensajes en el login
+function displayMessage(message, color) {
+    loginMessage.innerHTML = message;
+    loginMessage.style.color = color;
+    loginMessage.classList.remove("d-none");
 }
 
-// Inicio de solicitud de credenciales
-requestCredentials();
+// Oculta los mensajes de error
+function resetError(id) {
+    document.getElementById(id + 'Help').className = "d-none";
+}
+
+//  Eventos para resetear errores
+inputUsername.addEventListener("change", function() {
+  resetError('user');
+});
+
+inputPassword.addEventListener("change", function() {
+  resetError('password');
+});

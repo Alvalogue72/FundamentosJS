@@ -1,15 +1,14 @@
 <h1>Fundamentos JS (ES6)</h1>
-<h2>Website Project - Desarrollo Web en Entorno Cliente - 2º DAW</h2>
 
 <h2>New Updates !!!</h2>
-<h6>Login con Ventanas</h6>
-<p>Implementación de sistema de Login con ventanas. Usando prompt para solicitar usuario y contraseña.</p>
-<p>Validación del usuario mediante expresión regular para que tenga al menos 3 caracteres alfanuméricos y no este vacio, al igual que la contraseña.</p>
-<p>Mostrar mensajes utilizando alert y preguntar si desea intentarlo de nuevo usando confirm</p>
-<p>Autenticación de las credenciales introducidas con las credenciales almecenadas/p>
+<h6>Login con Formulario Sin Estado</h6>
+<p>Implementación de un sistema de login con formulario con validaciones mediante expresiones regulares, tanto para el usuario como para la contraseña. Cuando los datos no son válidos se muestran mensajes de errores, que desaparecen automáticamente cuando el usuario corrige los campos usando eventos.</p>
+<p>La validación de credenciales se realiza al enviar el formulario (evento `submit`), mostrando un mensaje que indica si las credenciales son incorrectas o dando la bienvenida en caso de que sean correctas.</p>
+<p>Además, tras validar correctamente las credenciales, el contenido principal se mostrará después de 2 segundos.</p>
 
 <h6>Rendimiento</h6>
 <p>Minificación archivo css, eliminar espacios y comentarios. Y uso de variables en la paleta de colores para mejorar legibilidad</p>
+<p>Para optimizar la carga de imágenes, he usado el atributo loading="lazy" en los elementos img, lo que permite cargar las imágenes solo cuando sean necesarias.</p>
 
 <h2>Table of Contents</h2>
 <ul>
