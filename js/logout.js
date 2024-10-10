@@ -8,7 +8,7 @@ logout.addEventListener("click", function(event) {
     
 }); 
 
-/* function redirigirAHome() {
+function redirigirAHome() {
   // Obtener la ruta actual del archivo HTML
   const rutaActual = window.location.origin + window.location.pathname;
 
@@ -34,10 +34,4 @@ const ultimo = vamo.join('/') + '/index.html';
 
   // Redirigir a la página de inicio
   window.location.href = ultimo;
-} */
-
-function redirigirAHome() {
-  // Redirigir directamente a la página de inicio en el directorio raíz
-  window.location.href = window.location.origin + '/index.html';
 }
-
