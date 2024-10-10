@@ -12,6 +12,10 @@ const loginMessage = document.getElementById("loginMessage");
 const userHelp = document.getElementById("userHelp");
 const passwordHelp = document.getElementById("passwordHelp");
 
+if (getCookie("loggedIn")) {
+    window.location.href = "./ejercicios/index.html";
+}
+
 // Evento que maneja el formulario
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -33,11 +37,15 @@ loginForm.addEventListener("submit", function (event) {
 
         displayMessage("¡Bienvenido! &#128512", "green");
         
+        setCookie("loggedIn", "true", 1);
+
         setTimeout(() => {
-            document.getElementById("login").className = "d-none";
-            document.getElementById("navbar").className = "navbar navbar-expand-lg text-mywhite d-flex"
-            document.getElementById("mainContent").className = "container my-5 d-flex justify-content-center flex-wrap gap-4"
+            window.location.href = "./ejercicios/index.html";
         }, 2000);
+
+        inputUsername.disabled = true;
+        inputPassword.disabled = true;
+        submitButton.disabled = true;
         
     } else {
         displayMessage("Credenciales incorrectas, acceso denegado", "red");
