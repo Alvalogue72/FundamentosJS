@@ -8,7 +8,7 @@ logout.addEventListener("click", function(event) {
     
 }); */
 
-const logout = document.getElementById("logout");
+/* const logout = document.getElementById("logout");
 
 logout.addEventListener("click", function(event) {
   event.preventDefault();
@@ -22,7 +22,19 @@ logout.addEventListener("click", function(event) {
   // Redirigir al index.html con los mismos parámetros
   window.location.href = `${baseUrl}?${queryParams}`;
 });
+ */
 
+const logout = document.getElementById("logout");
+
+logout.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  console.log("Siiuuuuuuu");
+
+  // Eliminar cookie y redirigir con parámetros (si existen)
+  deleteCookie("loggedIn");
+  window.location.href = `${window.location.origin}${window.location.search}`;
+});
 /* function checkPath() {
   
   const rutaActual = window.location.pathname;
