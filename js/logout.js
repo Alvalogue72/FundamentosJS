@@ -1,4 +1,4 @@
-const logout = document.getElementById("logout");
+/* const logout = document.getElementById("logout");
 
 logout.addEventListener("click", function(event) {
     event.preventDefault();
@@ -6,9 +6,24 @@ logout.addEventListener("click", function(event) {
     deleteCookie("loggedIn");
     setTimeout(() => { checkPath();}, 500);
     
+}); */
+
+const logout = document.getElementById("logout");
+
+logout.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  deleteCookie("loggedIn");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const baseUrl = window.location.origin;
+  const queryParams = urlParams.toString();
+
+  // Redirigir al index.html con los mismos parámetros
+  window.location.href = `${baseUrl}?${queryParams}`;
 });
 
-function checkPath() {
+/* function checkPath() {
   
   const rutaActual = window.location.pathname;
 
@@ -29,4 +44,4 @@ function checkPath() {
     
     window.location.href = rutaHome;
 
-}
+} */
