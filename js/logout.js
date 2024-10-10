@@ -1,12 +1,12 @@
-/* const logout = document.getElementById("logout");
+ const logout = document.getElementById("logout");
 
 logout.addEventListener("click", function(event) {
     event.preventDefault();
 
     deleteCookie("loggedIn");
-    setTimeout(() => { checkPath();}, 500);
+    setTimeout(() => { redirigirAHome();}, 500);
     
-}); */
+}); 
 
 /* const logout = document.getElementById("logout");
 
@@ -24,17 +24,25 @@ logout.addEventListener("click", function(event) {
 });
  */
 
-const logout = document.getElementById("logout");
+function redirigirAHome() {
+  // Obtener la ruta actual del archivo HTML
+  const rutaActual = window.location.pathname;
 
-logout.addEventListener("click", function(event) {
-  event.preventDefault();
+  // Dividir la ruta por '/' para obtener un array de directorios
+  const partesRuta = rutaActual.split('/');
 
-  console.log("Siiuuuuuuu");
+  // Eliminar el último elemento del array (nombre del archivo)
+  partesRuta.pop();
 
-  // Eliminar cookie y redirigir con parámetros (si existen)
-  deleteCookie("loggedIn");
-  window.location.href = `${window.location.origin}${window.location.search}`;
-});
+  // Unir las partes restantes para obtener el directorio padre
+  const directorioPadre = partesRuta.join('/');
+
+  // Construir la ruta completa hacia el archivo index.html en el directorio raíz
+  const rutaHome = directorioPadre.split('/').slice(0, -1).join('/') + '/index.html';
+
+  // Redirigir a la página de inicio
+  window.location.href = rutaHome;
+}
 /* function checkPath() {
   
   const rutaActual = window.location.pathname;
