@@ -1,14 +1,22 @@
 <h1>Fundamentos JS (ES6)</h1>
 
 <h2>New Updates !!!</h2>
-<h6>Login con Formulario Sin Estado</h6>
+<h6>Login con Formulario con control de sesión - Cookies</h6>
 <p>Implementación de un sistema de login con formulario con validaciones mediante expresiones regulares, tanto para el usuario como para la contraseña. Cuando los datos no son válidos se muestran mensajes de errores, que desaparecen automáticamente cuando el usuario corrige los campos usando eventos.</p>
 <p>La validación de credenciales se realiza al enviar el formulario (evento `submit`), mostrando un mensaje que indica si las credenciales son incorrectas o dando la bienvenida en caso de que sean correctas.</p>
-<p>Además, tras validar correctamente las credenciales, el contenido principal se mostrará después de 2 segundos.</p>
+<p>Tras validar correctamente las credenciales, la página redirige al usuario a menu de esta donde podra navegar y entre las opciones de la navbar con el uso de <b>window.location.href</b> y se crea una cookie que expira en un 1 minuto.</p>
+<p>El archico logout.js implementa un botón que sirve como cierre de sesión al usuario, al hacer que la cookie expira, que checkea en que ruta se encuentra para que dicho botón funcione independientemente de en que ruta se encuentra el usuario. Además cuando el archivo getCookie.js observa que la cookie (tras pasar un minuto) ha sido expirada al cambiar de dirección o recargar la página, redireccionará al usuario al login y deberá iniciar sesión nuevamente</p>
+<h6>Number - Mini-Calculadora</h6>
+<p>Mini-Calculadora que opera con dos números introducidos por el usuario y muestra el resultado. Realiza las operaciones de suma, resta, multiplicación, división, valor entero, parte decimal y factorial.</p>
+<img src="./img/calculadoramini.jpg">
+
+<h6>Number - Conversor de Bases</h6>
+<p>Convierte un número decimal ingresado por el usuario a una de las bases elegidas (binario, octal o hexadecimal).</p>
+<img src="./img/conversosbases.jpg">
+
 
 <h6>Rendimiento</h6>
 <p>Minificación archivo css, eliminar espacios y comentarios. Y uso de variables en la paleta de colores para mejorar legibilidad</p>
-<p>Para optimizar la carga de imágenes, he usado el atributo loading="lazy" en los elementos img, lo que permite cargar las imágenes solo cuando sean necesarias.</p>
 
 <h2>Table of Contents</h2>
 <ul>

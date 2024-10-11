@@ -1,7 +1,7 @@
 const numeroInput = document.getElementById('numero');
-const resultadoSpan = document.getElementById('resultado');
+const resultSpan = document.getElementById('result');
 
-// Asignamos eventos directamente a cada botón
+
 document.getElementById('btn-binario').addEventListener('click', () => convertir(2));
 document.getElementById('btn-octal').addEventListener('click', () => convertir(8));
 document.getElementById('btn-hexadecimal').addEventListener('click', () => convertir(16));
@@ -9,20 +9,19 @@ document.getElementById('btn-hexadecimal').addEventListener('click', () => conve
 function convertir(base) {
     const numero = parseInt(numeroInput.value);
 
-    // Validar si la entrada es un número válido
+    // Validar si es un número válido
     if (isNaN(numero)) {
-        resultadoSpan.textContent = "Introduce un número válido.";
+        resultSpan.textContent = "Introduce un número válido.";
         return;
     }
 
     // Convertimos el número a la base correspondiente
-    let resultado = numero.toString(base);
+    let result = numero.toString(base);
 
-    // Convertimos a mayúsculas si la base es hexadecimal
+    // Convertir a mayúsculas en base hexadecimal
     if (base === 16) {
-        resultado = resultado.toUpperCase();
+        result = result.toUpperCase();
     }
 
-    // Mostramos el resultado en el span correspondiente
-    resultadoSpan.textContent = resultado;
+    resultSpan.textContent = result;
 }

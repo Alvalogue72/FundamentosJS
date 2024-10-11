@@ -14,14 +14,14 @@
         <script defer src="../../js/getCookie.js"></script>
         <script defer src="../../js/setCookie.js"></script>
         <script defer src="../../js/deleteCookie.js"></script>
-        <script defer src="../../js/logout.js"></script>
+        <!-- <script defer src="../../js/logout.js"></script> -->
         <script defer src="./js/mini-calculadora.js"></script>
     </head>
     <body>
-    <div class="text-mywhite ff-robotobody">
+    <div class="text-mywhite ff-robotobody bg-darkwood">
     
         <!--       HEADER       -->
-        <header class="bg-lightgrey">
+        <header>
             <div class="container-fluid p-3">
                 <div class="row">
                     <div class="col-10">
@@ -59,8 +59,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Number</a>
                         <ul class="dropdown-menu">
-                            <li><a id="mini-calculadora" class="dropdown-item">Mini-Calculadora</a></li>
-                            <li><a id="cambio-base" class="dropdown-item">Conversos de bases</a></li>
+                            <li><a id="mini-calculadora" class="dropdown-item" href="../index.html">Mini-Calculadora</a></li>
+                            <li><a id="cambio-base" class="dropdown-item" href="../index.html">Conversor de bases</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -72,38 +72,38 @@
         </nav>
     
         <!--        MAIN        -->
-        <main id="mainContent" class="container my-5 d-flex justify-content-center flex-wrap gap-4">
+        <main id="mainContent" class="container my-5 d-flex justify-content-center">
 
-			<div class="calculator">
-				<h2>Mini calculadora</h2>
-				<form id="calcForm">
-					<label for="num1">Operando 1:</label>
-					<input type="number" id="num1" placeholder="Ingresa el primer número" required>
-					
-					<label for="num2">Operando 2:</label>
-					<input type="number" id="num2" placeholder="Ingresa el segundo número" required>
-		
-					<div class="operations">
-						<button type="button" onclick="calculate('add')">+</button>
-						<button type="button" onclick="calculate('sub')">-</button>
-						<button type="button" onclick="calculate('mul')">&times;</button>
-						<button type="button" onclick="calculate('div')">÷</button>
-						<button type="button" onclick="calculate('int')">⌊x⌋</button>
-						<button type="button" onclick="calculate('dec')">.</button>
-						<button type="button" onclick="calculate('fact1')">x!</button>
-					</div>
-				</form>
-		
-				<div class="result" id="result">
-					<p>Resultado: <span id="resultValue">--</span></p>
-				</div>
-		
-				<div class="footer">
-					<a href="#">>> Página principal</a>
-				</div>
-			</div>
+            <div class="bg-blur border rounded bg-blur p-4">
+                <h2>Mini calculadora</h2>
+                <form>
+                    <label for="num1" class="form-label">Operando 1:</label>
+                    <input type="number" id="num1" class="form-control" placeholder="Ingresa el primer número" required>
+                    
+                    <label for="num2" class="form-label mt-2">Operando 2:</label>
+                    <input type="number" id="num2" class="form-control" placeholder="Ingresa el segundo número" required>
         
-        </main>
+                    <div class="operations mt-3">
+                        <button type="button" id="btn-add">+</button>
+                        <button type="button" id="btn-sub">-</button>
+                        <button type="button" id="btn-mul">x</button>
+                        <button type="button" id="btn-div">÷</button>
+                        <button type="button" id="btn-int">_.</button>
+                        <button type="button" id="btn-dec">._</button>
+                        <button type="button" id="btn-fact1">x!</button>
+                    </div>
+                </form>
+        
+                <div class="bg-darkgrey rounded">
+                    <p class="p-3">Resultado: <span id="resultValue"></span></p>
+                </div>
+        
+                <div class="text-center mt-4">
+                    <a href="../index.html" class="text-decoration-none button d-inline-block">Home</a>
+                </div>
+            </div>
+            
+        </main>        
     
         <!--       FOOTER       -->
         <footer class=" container-fluid bg-lightgrey p-2 text-white">

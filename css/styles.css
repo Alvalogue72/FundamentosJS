@@ -12,6 +12,8 @@ h1, h2, h3, h4, h5, h6 {font-family: titulos;}
 .bg-blur {backdrop-filter: blur(7px);
     background: transparent;}
 
+.bg-gradient{background: linear-gradient(135deg, #111, var(--lightgrey));}
+
 #loginForm {backdrop-filter: blur(7px);
     background: transparent;
     color: var(--mywhite);}
@@ -26,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {font-family: titulos;}
 .bg-darkgrey {background-color: var(--darkgrey);}
 .bg-lightgrey {background-color: var(--lightgrey);}
 .bg-yellowjs {background-color: var(--yellowjs)!important;}
+.bg-mywhite {background-color: var(--mywhite)!important;}
 .text-mywhite {color: var(--mywhite);}
 
 /***********************    SIZING    ***********************/
