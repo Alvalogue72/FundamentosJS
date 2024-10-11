@@ -12,10 +12,6 @@ const loginMessage = document.getElementById("loginMessage");
 const userHelp = document.getElementById("userHelp");
 const passwordHelp = document.getElementById("passwordHelp");
 
-if (getCookie("loggedIn")) {
-    window.location.href = "./ejercicios/index.html";
-}
-
 // Evento que maneja el formulario
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();

@@ -7,6 +7,14 @@
 
 .ff-robotobody {font-family: textonormal;}
 h1, h2, h3, h4, h5, h6 {font-family: titulos;}
+
+.bg-darkwood {background-image: url(../img/bg-programming.jpg);}
+.bg-blur {backdrop-filter: blur(7px);
+    background: transparent;}
+
+#loginForm {backdrop-filter: blur(7px);
+    background: transparent;
+    color: var(--mywhite);}
  
 /***********************    COLORS    ***********************/
 :root {
@@ -38,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {font-family: titulos;}
     position: relative;
     padding: 10px 24px;
     font-size: 0.7em;
-    color: black;
+    color: var(--mywhite);
     border: 2px solid var(--yellowjs);
     border-radius: 34px;
     background-color: transparent;
@@ -68,13 +76,15 @@ h1, h2, h3, h4, h5, h6 {font-family: titulos;}
 .button:active {scale: 1;}
 
 /***********************    HEADER    ***********************/
-header {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
+header {backdrop-filter: blur(7px);
+    background: transparent;
+    color: var(--mywhite);}
 
 /***********************    NAVBAR    ***********************/
-nav {background-color: var(--darkgrey);}
+nav {background: linear-gradient(135deg, #111, var(--lightgrey));}
 
 /***********************    FOOTER    ***********************/
-footer {text-shadow: 2px 2px 4px rgb(0,0,0,0.75);}
+footer {background: linear-gradient(135deg, #111, var(--lightgrey));}
 
 .fa-github {background-color: black;
     border: solid 1px #444;}

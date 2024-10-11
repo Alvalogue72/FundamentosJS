@@ -4,34 +4,23 @@ logout.addEventListener("click", function(event) {
     event.preventDefault();
 
     deleteCookie("loggedIn");
-    setTimeout(() => { redirigirAHome();}, 500);
+    setTimeout(() => { checkPath();}, 500);
     
 }); 
 
-function redirigirAHome() {
-  // Obtener la ruta actual del archivo HTML
-  const rutaActual = window.location.origin + window.location.pathname;
+function checkPath() {
 
-  // Dividir la ruta por '/' para obtener un array de directorios
-  const partesRuta = rutaActual.split('/');
+    const basicPath = window.location.pathname.split('/');
+    const positionDirectory = basicPath.indexOf("FundamentosJS");
+    const loginPath = basicPath.slice(0, positionDirectory + 1).join('/') + '/index.html';
 
-  // Eliminar el último elemento del array (nombre del archivo)
-  partesRuta.pop();
+    window.location.href = loginPath;
+}
 
-  // Unir las partes restantes para obtener el directorio padre
-  const directorioPadre = partesRuta.join('/');
+if (!(getCookie("loggedIn") === "true")) {
+    const basicPath = window.location.pathname.split('/');
+    const positionDirectory = basicPath.indexOf("FundamentosJS");
+    const loginPath = basicPath.slice(0, positionDirectory + 1).join('/') + '/index.html';
 
-
-
-  // Construir la ruta completa hacia el archivo index.html en el directorio raíz
-  const rutaHome = directorioPadre.split('/');
-
-const enga = rutaHome.indexOf("");
-
-const vamo = rutaHome.slice(0, enga + 2);
-
-const ultimo = vamo.join('/') + '/index.html';
-
-  // Redirigir a la página de inicio
-  window.location.href = ultimo;
+    window.location.href = loginPath;
 }

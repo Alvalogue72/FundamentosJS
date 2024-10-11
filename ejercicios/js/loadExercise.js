@@ -4,11 +4,11 @@ function loadExercise(exercise) {
 
     switch (exercise) {
         case 'mini-calculadora':
-            mainContent.innerHTML = `<div class="card w-18rem zoom2">
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
                   <div class="card-body">
                     <h5 class="card-title">Mini-Calculadora</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                    <p class="card-text">Descripción del ejercicio 01</p>
+                    <h6 class="card-subtitle mb-2"><i>Number</i></h6>
+                    <p class="card-text fs-8">Mini-Calculadora que opera con dos números introducidos por el usuario.</p>
                     <div class="text-center">
                         <a href="./mini-calculadora/index.html" class="text-decoration-none button d-inline-block">Solución</a>
                     </div>
@@ -16,13 +16,13 @@ function loadExercise(exercise) {
                 </div>`
                 break;
         case 'cambio-base':
-            mainContent.innerHTML = `<div class="card w-18rem zoom2">
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
                   <div class="card-body">
-                    <h5 class="card-title">Cambio de base</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                    <p class="card-text">Descripción del ejercicio 02</p>
+                    <h5 class="card-title">Conversor de Bases</h5>
+                    <h6 class="card-subtitle mb-2"><i>Number</i></h6>
+                    <p class="card-text fs-8">Convierte un número decimal ingresado por el usuario a una de las bases elegidas.</p>
                     <div class="text-center">
-                        <a href="./ejercicios/ejer02/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                        <a href="./cambio-base/index.html" class="text-decoration-none button d-inline-block">Solución</a>
                     </div>
                   </div>
                 </div>`
