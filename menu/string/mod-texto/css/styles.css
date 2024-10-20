@@ -1,0 +1,29 @@
+textarea {
+    width: 100%;
+    height: 100px;}
+
+.controlButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 7px;
+    margin: 0px 10px 20px 10px;}
+
+.controlButtons button {
+    padding: 15px 0px;
+    border-radius: 0.5rem;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    background-color: #FFD600;
+    color: #000;
+    transition: all 0.3s ease;}
+
+.controlButtons button:hover {
+    background-color: #FFD600;
+    transform: translateY(-3px);}
+
+#status {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;}

@@ -68,3 +68,13 @@ function updateResult(value) {
     const resultValueElement = document.getElementById("resultValue");
     resultValueElement.textContent = value;
 }
+
+const logout = document.getElementById("logout");
+
+logout.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    deleteSessionStorage("loggedIn");
+    setTimeout(() => { window.location.href = "../../../index.html";}, 500);
+    
+}); 

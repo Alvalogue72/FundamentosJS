@@ -25,3 +25,13 @@ function convertir(base) {
 
     resultSpan.textContent = result;
 }
+
+const logout = document.getElementById("logout");
+
+logout.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    deleteSessionStorage("loggedIn");
+    setTimeout(() => { window.location.href = "../../../index.html";}, 500);
+    
+}); 

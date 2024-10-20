@@ -6,16 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Javascript</title>
         <link href="./img/favicon.ico" rel="icon" type="image/x-icon">
-        <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+        <link href="../../../css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script defer src="../../js/getCookie.js"></script>
-        <script defer src="../../js/setCookie.js"></script>
-        <script defer src="../../js/deleteCookie.js"></script>
-        <script defer src="../../js/logout.js"></script>
-        <script defer src="./js/mini-calculadora.js"></script>
+        <script defer src="../../../js/getSessionStorage.js"></script>
+        <script defer src="../../../js/deleteSessionStorage.js"></script>
+        <script defer src="./js/mod-texto.js"></script>
     </head>
     <body>
     <div class="text-mywhite ff-robotobody bg-darkwood">
@@ -29,7 +27,7 @@
                         <h4>Desarrollo WEB Entorno Cliente</h4>
                     </div>
                     <div class="col-2">
-                        <img id="profile" src="../../img/file.jpg" class="rounded-3 w-70p float-end" alt="Profile Image">
+                        <img id="profile" src="../../../img/file.jpg" class="rounded-3 w-70p float-end" alt="Profile Image">
                     </div>
                 </div>
             </div>
@@ -38,14 +36,14 @@
         <!--       NAVBAR       -->
         <nav id="navbar" class="navbar navbar-expand-lg text-mywhite d-flex" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand w-70p me-3 p-0" href=""><img src="../../img/js.png" class="w-100" alt="Icon JS" loading="lazy"></a>
+                <a class="navbar-brand w-70p me-3 p-0" href=""><img src="../../../img/js.png" class="w-100" alt="Icon JS" loading="lazy"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="https://github.com/Alvalogue72/FundamentosJS">GitHub</a>
@@ -59,8 +57,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Number</a>
                         <ul class="dropdown-menu">
-                            <li><a id="mini-calculadora" class="dropdown-item" href="../index.html">Mini-Calculadora</a></li>
-                            <li><a id="cambio-base" class="dropdown-item" href="../index.html">Conversor de bases</a></li>
+                            <li><a id="mini-calculadora" href="../../index.html" class="dropdown-item">Mini-Calculadora</a></li>
+                            <li><a id="cambio-base" href="../../index.html" class="dropdown-item">Conversor de Bases</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">String</a>
+                        <ul class="dropdown-menu">
+                            <li><a id="mod-texto" href="../../index.html" class="dropdown-item">Modificar Texto</a></li>
+                            <li><a id="mod-texto-api" href="../../index.html" class="dropdown-item">Modificar Texto - API</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -72,34 +77,36 @@
         </nav>
     
         <!--        MAIN        -->
-        <main id="mainContent" class="container my-5 d-flex justify-content-center">
+        <main id="mainContent" class="container-fluid my-5 d-flex justify-content-center">
 
-            <div class="bg-blur border rounded bg-blur p-4">
-                <h2>Mini calculadora</h2>
-                <form>
-                    <label for="num1" class="form-label">Operando 1:</label>
-                    <input type="number" id="num1" class="form-control" placeholder="Ingresa el primer número" required>
-                    
-                    <label for="num2" class="form-label mt-2">Operando 2:</label>
-                    <input type="number" id="num2" class="form-control" placeholder="Ingresa el segundo número" required>
-        
-                    <div class="operations mt-3">
-                        <button type="button" id="btn-add">+</button>
-                        <button type="button" id="btn-sub">-</button>
-                        <button type="button" id="btn-mul">x</button>
-                        <button type="button" id="btn-div">÷</button>
-                        <button type="button" id="btn-int">_.</button>
-                        <button type="button" id="btn-dec">._</button>
-                        <button type="button" id="btn-fact1">x!</button>
-                    </div>
-                </form>
-        
-                <div class="bg-darkgrey rounded">
-                    <p class="p-3">Resultado: <span id="resultValue"></span></p>
+            <div class="w-75 border rounded bg-blur p-4">
+                <h2>Modificar texto</h2>
+                <label for="inputText" class="form-label">Escribe un texto:</label>
+                <textarea id="inputText" class="form-control" placeholder="Escribe un texto"></textarea>
+                <br>
+                <div id="controlButtons" class="controlButtons">
+                    <button id="btnUpperAll">A-Z</button>
+                    <button id="btnLowerAll">a-z</button>
+                    <button id="btnUpperFirstLetter">A_</button>
+                    <button id="btnUpperLastLetter">_Z</button>
+                    <button id="btnLowerFirstLetter">a_</button>
+                    <button id="btnLowerLastLetter">_z</button>
+                    <button id="btnUpperVocals">AEIOU</button>
+                    <button id="btnLowerVocals">aeiou</button>
+                    <button id="btnUpperConsonant">BCDEF</button>
+                    <button id="btnLowerConsonant">bcdef</button>
                 </div>
+                <h4>Controles</h4>
+                <div id="controls" class="controlButtons">
+                    <button id="btnRandom">Aleatorio</button>
+                    <button id="btnFast">Rápido</button>
+                    <button id="btnSlow">Lento</button>
+                    <button id="btnStop">Parar</button>
+                </div>
+                <div id="status"></div>
         
                 <div class="text-center mt-4">
-                    <a href="../index.html" class="text-decoration-none button d-inline-block">Home</a>
+                    <a href="../../index.html" class="text-decoration-none button d-inline-block">Home</a>
                 </div>
             </div>
             

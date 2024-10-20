@@ -12,6 +12,10 @@ const loginMessage = document.getElementById("loginMessage");
 const userHelp = document.getElementById("userHelp");
 const passwordHelp = document.getElementById("passwordHelp");
 
+if (getSessionStorage("loggedIn") === "true") {
+    window.location.replace("./menu/index.html") ;
+}
+
 // Evento que maneja el formulario
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -33,10 +37,10 @@ loginForm.addEventListener("submit", function (event) {
 
         displayMessage("¡Bienvenido! &#128512", "green");
         
-        setCookie("loggedIn", "true", 1);
+        setSessionStorage("loggedIn", "true");
 
         setTimeout(() => {
-            window.location.href = "./ejercicios/index.html";
+            window.location.href = "./menu/index.html";
         }, 2000);
 
         inputUsername.disabled = true;
