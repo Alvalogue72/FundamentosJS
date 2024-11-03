@@ -51,6 +51,18 @@ function loadExercise(exercise) {
                   </div>
                 </div>`
                 break;
+        case 'ope-matrices':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">Operaciones con Matrices</h5>
+                    <h6 class="card-subtitle mb-2"><i>Arrays</i></h6>
+                    <p class="card-text fs-8">Realiza operaciones básicas con matrices cuadradas generadas aleatoriamente. Se incluyen suma, resta y multiplicación de matrices. Además, el programa permitirá realizar pruebas automáticas repetidas.</p>
+                    <div class="text-center">
+                        <a href="./arrays/ope-matrices/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
                 default:
     };
 };

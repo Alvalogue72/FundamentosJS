@@ -1,16 +1,14 @@
 <h1>Fundamentos JS (ES6)</h1>
 
-<h2>New Updates !!!</h2>
-<h6>Login con Formulario con control de sesión - SessionStorage</h6>
-<p>Formulario de login con validaciones mediante expresiones regulares, tanto para el usuario como para la contraseña. Cuando los datos no son válidos se muestran mensajes de errores, que desaparecen automáticamente cuando el usuario corrige los campos usando eventos. Validación de credenciales de usuario y  se controla las sesiones utilizando sessionStorage. Una vez que el usuario inicia sesión correctamente, se almacena un valor en sessionStorage para mantener la sesión activa hasta que el usuario cierre sesión mediante el boton de logout (ARREGALDO) o cierre la ventana del navegador.</p>
-<h6>String - Modificar Texto</h6>
-<p>Transforma el texto introducido en una de las formas elegidas, incluye también un generador aleatorio, con aumento y disminución de velocidad eliminando los datos de la sesión de sessionStorage.</p>
-<img src="./img/modtexto.jpg">
+<h2>🚀 Últimas Actualizaciones</h2>
+<h6>🔑 Login con Formulario con control de sesión - IndexedDB</h6>
+<p>Formulario de login con validaciones mediante expresiones regulares, tanto para el usuario como para la contraseña. Cuando los datos no son válidos se muestran mensajes de errores, que desaparecen automáticamente cuando el usuario corrige los campos usando eventos. Validación de credenciales de usuario y  se controla las sesiones utilizando IndexedDB. Una vez que el usuario inicia sesión correctamente, se almacena un valor en en la base de datos creada para mantener la sesión activa hasta que el usuario cierre sesión mediante el boton de logout.</p>
+<h6>➗ Array - Operaciones con matrices</h6>
+<p>Realiza operaciones básicas con matrices cuadradas generadas aleatoriamente, introduciendo valores de rangos por el usuario o de manera también aleatoria. Se incluyen suma, resta y multiplicación de matrices. Además, el programa permitirá realizar pruebas automáticas repetidas, gnerando matrices y el resultado de la operación de manera sistemática a lo largo del tiempo pudiendo aumentar su velocidad o disminuirla hasta que el usuario pulse el botón de parar.</p>
+<img src="./img/opematrices.jpg">
 
-<h6>String - Modificar Texto - API</h6>
-<p>Transforma el texto generado desde una api de base de datos de deportes en una de las formas elegidas, incluye también un generador aleatorio, con aumento y disminución de velocidad.</p>
-<img src="./img/modtextoapi.jpg">
-
+<h6>🎨 Modificación Estilo</h6>
+<p>Cambio de estilo en el login y en los backgrounds de cada página</p>
 
 <h2>Estructura de directorios</h2>
 <img src="./img/dir.jpg">

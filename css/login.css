@@ -1,82 +1,50 @@
-* {margin: 0;
-padding: 0;
-box-sizing: border-box;}
-
-.wrapper {display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background: url(../img/bg-programming.jpg) no-repeat;
-background-size: cover;
-background-position: center;
-color: #EEEEEE;
-}
-
-header img {width: 70px;}
-
-.login {
-    position: relative;
-    width: 400px;
-    height: 440px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-box {
-    width: 100%;
-    padding: 40px;
-} 
-
-.form-box h2 {
-    font-size: 2em;
+.form h2 {
+    margin-bottom: 40px;
     text-align: center;
 }
 
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #EEEEEE;
-    margin: 30px 0;
+.form {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid #EEEEEE;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.input-box label {
+.form__group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form__label {
     position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    font-weight: 500;
-    pointer-events: none;
+    top: 7px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px;
+    color: #EEEEEE;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label {
+    top: -12px;
+    left: 8px;
+    font-size: 12px;
     transition: 0.5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: -5px;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: #EEEEEE;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-
-.input-box .icon {
+.form__icon {
     position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    line-height: 57px;
+    bottom: 7px;
+    right: 7px
 }

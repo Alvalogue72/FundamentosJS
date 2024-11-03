@@ -7,17 +7,17 @@
         <title>Javascript</title>
         <link href="../../../img/js.png" rel="icon" type="image/x-icon">
         <link href="../../../css/styles.css" rel="stylesheet" type="text/css">
-        <link href="./css/styles.css" rel="stylesheet">
+        <link href="./css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script defer src="../../../js/indexedDB.js"></script>
         <script defer src="../../../js/deleteIndexedDB.js"></script>
-        <script defer src="./js/mod-texto.js"></script>
+        <script defer src="./js/ope-matrices.js"></script>
     </head>
     <body>
     <div class="text-mywhite ff-robotobody bg-darkestdesk">
-    
+
         <!--       NAVBAR       -->
         <nav id="navbar" class="navbar navbar-expand-lg text-mywhite d-flex" data-bs-theme="dark">
             <div class="container-fluid">
@@ -62,42 +62,79 @@
         </nav>
     
         <!--        MAIN        -->
-        <main id="mainContent" class="container-fluid my-5 d-flex justify-content-center">
+        <main class="main">
+          
+            <h3>Operaciones con Matrices</h3>
 
-            <div class="w-75 border rounded bg-blur p-4">
-                <h2>Modificar texto</h2>
-                <label for="inputText" class="form-label">Escribe un texto:</label>
-                <textarea id="inputText" class="form-control" placeholder="Escribe un texto"></textarea>
-                <br>
-                <div id="controlButtons" class="controlButtons">
-                    <button id="btnUpperAll">A-Z</button>
-                    <button id="btnLowerAll">a-z</button>
-                    <button id="btnUpperFirstLetter">A_</button>
-                    <button id="btnUpperLastLetter">_Z</button>
-                    <button id="btnLowerFirstLetter">a_</button>
-                    <button id="btnLowerLastLetter">_z</button>
-                    <button id="btnUpperVocals">AEIOU</button>
-                    <button id="btnLowerVocals">aeiou</button>
-                    <button id="btnUpperConsonant">BCDEF</button>
-                    <button id="btnLowerConsonant">bcdef</button>
+            <h5>Valores</h5>
+            
+            <div class="grades">
+                <div class="grades__group">
+                    <input type="number" id="matrix-size" class="grades__input" placeholder=" ">
+                    <label for="matrix-size" class="grades__label">Tamaño matriz (n x n):</label>
                 </div>
-                <h4>Controles</h4>
-                <div id="controls" class="controlButtons">
-                    <button id="btnRandom">Aleatorio</button>
-                    <button id="btnFast">Rápido</button>
-                    <button id="btnSlow">Lento</button>
-                    <button id="btnStop">Parar</button>
+                
+                <div class="grades__group">
+                    <input type="number" id="min-value" class="grades__input" placeholder=" ">
+                    <label for="min-value" class="grades__label">Valor mínimo:</label>
                 </div>
-                <div id="status"></div>
-        
-                <div class="text-center mt-4">
-                    <a href="../../index.html" class="text-decoration-none button d-inline-block">Home</a>
+    
+                <div class="grades__group">
+                    <input type="number" id="max-value" class="grades__input" placeholder=" ">
+                    <label for="max-value" class="grades__label">Valor máximo:</label>
                 </div>
             </div>
+
+            <div class="grades-button">
+                <button id="generate-matrices" class="button">Generar Matrices</button>
+                <button id="random-values" class="button">Valores aleatorios</button>
+            </div>
             
-        </main>        
+            
+            <h5>Controles</h5>
+            
+            <div class="controls-button">
+                <button id="random-operation" class="button">Aleatorio</button>
+                <button id="fast-operation" class="button">Rápido</button>
+                <button id="slow-operation" class="button">Lento</button>
+                <button id="stop-operation" class="button">Parar</button>
+            </div>
+
+            <h5>Operaciones</h5>
+            
+            <div class="operations">
+                <div>
+                    <h5>Matriz A</h5>
+                    <table id="matrixA"></table>
+                </div>
+                <div>
+                    <h5>Matriz B</h5>
+                    <table id="matrixB"></table>
+                </div>
+            </div>
+
+            <div class="operations-button">
+                <button data-operation="sum" class="operation-button button">Sumar</button>
+                <button data-operation="subtract" class="operation-button button">Restar</button>
+                <button data-operation="multiply" class="operation-button button">Multiplicar</button>
+            </div>
+            
+            
+            <h5>Resultado</h5>
+            <div class="results">
+                <div>
+                    <h6>Matriz C</h6>
+                    <table id="resultMatrix"></table>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="../../index.html" class="text-decoration-none button d-inline-block">Home</a>
+            </div>
+
+        </main>
     
-         <!--       FOOTER       -->
+        <!--       FOOTER       -->
         <footer class=" container-fluid p-2 text-white bg-blur">
             <div class="text-center">
                 <a href="https://github.com/Alvalogue72/FundamentosJS" target="_blank" class="text-white"><i class="fa-brands fa-github rounded-circle w-50p p-3 m-1 zoom2" aria-hidden="true"></i></a>

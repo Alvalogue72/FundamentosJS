@@ -69,12 +69,13 @@ function updateResult(value) {
     resultValueElement.textContent = value;
 }
 
-const logout = document.getElementById("logout");
+const logoutButton = document.getElementById("logout");
 
-logout.addEventListener("click", function(event) {
+// Evento para cerrar sesión
+logoutButton.addEventListener("click", function(event) {
+
     event.preventDefault();
-
-    deleteSessionStorage("loggedIn");
+    deleteIndexedDB("usuario");
     setTimeout(() => { window.location.href = "../../../index.html";}, 500);
-    
+
 }); 

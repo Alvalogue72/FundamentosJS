@@ -19,3 +19,8 @@ document.getElementById("mod-texto-api").addEventListener("click", function (eve
     event.preventDefault();
     loadExercise("mod-texto-api");
 });
+
+document.getElementById("ope-matrices").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("ope-matrices");
+});

@@ -1,0 +1,94 @@
+main {
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    margin: 60px;
+    border: 2px solid #a2a2a2;
+    border-radius: 7px;
+    padding: 0 27px 15px 27px;
+}
+
+main h3 {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background: #a2a2a2;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #212121;
+}
+
+main h5 {
+    margin: 0 0 25px 0;
+}
+
+.grades, .operations, .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.grades__group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.grades__label {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.grades__input {
+    width: 100%;
+    padding: 5px;
+    color: #EEEEEE;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #EEEEEE;
+    border-radius: 20px;
+}
+
+.grades__input:focus + .grades__label, .grades__input:not(:placeholder-shown) + .grades__label {
+    background-color: #EEEEEE;
+    color: #333;
+    padding: 1px 10px;
+    border-radius: 20px;
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+.grades-button, .operations-button, .controls-button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px 10px 15px 10px;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 15px;
+}
+
+.button {
+    margin: 7px 10px;
+} 
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Eliminar los controles en navegadores basados en WebKit */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

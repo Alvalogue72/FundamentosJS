@@ -8,15 +8,25 @@
 .ff-robotobody {font-family: textonormal;}
 h1, h2, h3, h4, h5, h6 {font-family: titulos;}
 
-.bg-darkwood {background-image: url(../img/bg-programming.jpg);}
-.bg-blur {backdrop-filter: blur(7px);
-    background: transparent;}
+.bg-desk {background-image: url(../img/desk.jpg);
+    background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;}
+
+.bg-darkdesk {background-image: url(../img/darkdesk.jpg);
+    background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;}
+
+.bg-darkestdesk {background-image: url(../img/darkestdesk.jpg);
+    background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;}
+
+.bg-blur {background-color: transparent;
+    backdrop-filter: blur(20px);}
 
 .bg-gradient{background: linear-gradient(135deg, #111, var(--lightgrey));}
-
-#loginForm {backdrop-filter: blur(7px);
-    background: transparent;
-    color: var(--mywhite);}
  
 /***********************    COLORS    ***********************/
 :root {
@@ -87,9 +97,7 @@ header {backdrop-filter: blur(7px);
 nav {background: linear-gradient(135deg, #111, var(--lightgrey));}
 
 /***********************    FOOTER    ***********************/
-footer {background: linear-gradient(135deg, #111, var(--lightgrey));}
 
-.fa-github {background-color: black;
-    border: solid 1px #444;}
+.fa-github {background-color: black;}
     
-.fa-linkedin-square {background-color: #0A66C2;}
+.fa-linkedin {background-color: #0A66C2;}

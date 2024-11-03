@@ -5,26 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Javascript</title>
-        <link href="./img/favicon.ico" rel="icon" type="image/x-icon">
+        <link href="./img/js.png" rel="icon" type="image/x-icon">
         <link href="./css/styles.css" rel="stylesheet" type="text/css">
+        <link href="./css/login.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script defer src="./js/setSessionStorage.js"></script>
-        <script defer src="./js/deleteSessionStorage.js"></script>
-        <script defer src="./js/getSessionStorage.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">
+        <script defer src="./js/setIndexedDB.js"></script>
+        <script defer src="./js/deleteIndexedDB.js"></script>
+        <script defer src="./js/getIndexedDB.js"></script>
+        <script defer src="./js/indexedDB.js"></script>
         <script defer src="./js/login.js"></script>
     </head>
     <body>
-    <div id="wrapper" class="text-mywhite ff-robotobody bg-darkwood d-flex flex-column min-vh-100">
+    <div id="wrapper" class="text-mywhite ff-robotobody bg-desk d-flex flex-column min-vh-100">
     
         <!--       HEADER       -->
         <header>
             <div class="container-fluid p-3">
                 <div class="row">
-                    <div class="col-10">
-                        <h3>Ejemplos - FUNDAMENTOS DE JS (ES6)</h3>
-                        <h4>Desarrollo WEB Entorno Cliente</h4>
+                    <div class="col-10 mt-3">
+                        <h4>Ejemplos - FUNDAMENTOS DE JS (ES6)</h4>
+                        <h5>Desarrollo WEB Entorno Cliente</h5>
                     </div>
                     <div class="col-2">
                         <img id="profile" src="./img/file.jpg" class="rounded-3 w-70p float-end" alt="Profile Image">
@@ -35,38 +36,36 @@
 
         <!--        LOGIN        -->
         <div id="login" class="container-fluid my-4 py-4 flex-grow-1">
-          <div class="row justify-content-center">
-            <div class="col-10 col-md-6 col-lg-4">
-              <form id="loginForm" class="p-4 rounded border">
-                <h2 class="text-center mb-4">Iniciar Sesión</h2>
+              <form id="loginForm" class="form" autocomplete="off">
+                <h2>Login</h2>
                 <div class="text-center">
                   <p id="loginMessage" class="bg-darkgrey mb-3 p-3 rounded d-none"></p>
                 </div>
                 <!-- Campo de Username -->
-                <div class="mb-3">
-                  <label for="username" class="form-label">Nombre de usuario:</label>
-                  <input type="text" id="username" name="username" class="form-control" value="usuario" required>
+                <div class="form__group">
+                  <input type="text" id="username" name="username" class="form__input" value="usuario" placeholder=" " required>
+                  <label for="username" class="form__label">Usuario</label>
                   <div id="userHelp" class="d-none"><i class="fa fa-times-circle-o" aria-hidden="true"></i> El usuario debe tener entre 3 y 30 caracteres alfanuméricos.</div>
+                  <span class="form__icon"><i class="fa-solid fa-user"></i></span>
                 </div>
                 <!-- Campo de Contraseña -->
-                <div class="mb-3">
-                  <label for="password" class="form-label">Contraseña</label>
-                  <input type="password" id="password" name="password" class="form-control" value="1234" required>
+                <div class="form__group">
+                  <input type="password" id="password" name="password" class="form__input" value="1234" placeholder=" " required>
+                  <label for="password" class="form__label">Contraseña</label>
                   <div id="passwordHelp" class="d-none"><i class="fa fa-times-circle-o" aria-hidden="true"></i> La contraseña debe tener mínimo 4 caracteres</div>
+                  <span class="form__icon"><i class="fa-solid fa-lock"></i></span>
                 </div>
                 <div class="d-grid">
                   <button type="submit" class="btn bg-yellowjs text-black">Iniciar Sesión</button>
                 </div>
               </form>
-            </div>
-          </div>
         </div>
     
         <!--       FOOTER       -->
-        <footer class="container-fluid p-2">
+        <footer class="container-fluid p-2 bg-blur">
             <div class="text-center">
-                <a href="https://github.com/Alvalogue72/FundamentosJS" target="_blank" class="text-white"><i class="fa fa-github rounded-circle w-50p p-3 m-1 zoom2" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-white"><i class="fa fa-linkedin-square rounded-circle w-50p p-3 m-1 zoom2" aria-hidden="true"></i></a>
+                <a href="https://github.com/Alvalogue72/FundamentosJS" target="_blank" class="text-white"><i class="fa-brands fa-github rounded-circle w-50p p-3 m-1 zoom2" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="text-white"><i class="fa-brands fa-linkedin rounded-circle w-50p p-3 m-1 zoom2" aria-hidden="true"></i></a>
                 <p class="mt-3 mb-0 fs-8">Legal Notice | Privacy Policy | Terms and Conditions</p>
                 <p class="mt-1 mb-1 fs-8">© 2024 Álvaro López Guerrero. All rights reserved.</p>
                 <p class="fs-8">ESTUDIANTE DESARROLLO DE APLICACIONES WEB</p>

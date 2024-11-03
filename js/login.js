@@ -12,9 +12,18 @@ const loginMessage = document.getElementById("loginMessage");
 const userHelp = document.getElementById("userHelp");
 const passwordHelp = document.getElementById("passwordHelp");
 
-if (getSessionStorage("loggedIn") === "true") {
-    window.location.replace("./menu/index.html") ;
-}
+async function checkLoginStatus() {
+    
+    const result = await getIndexedDB("usuario");
+    if (result === "1234") {
+    window.location.href = "./menu/index.html"; // Redirigir si ya ha iniciado sesión
+    }
+    }
+    // Comprobar el estado de login al cargar la página
+    window.addEventListener('pageshow', function () {
+        checkLoginStatus();
+    });
+    
 
 // Evento que maneja el formulario
 loginForm.addEventListener("submit", function (event) {
@@ -37,7 +46,7 @@ loginForm.addEventListener("submit", function (event) {
 
         displayMessage("¡Bienvenido! &#128512", "green");
         
-        setSessionStorage("loggedIn", "true");
+        setIndexedDB(valueUsername, valuePassword);
 
         setTimeout(() => {
             window.location.href = "./menu/index.html";
@@ -45,7 +54,6 @@ loginForm.addEventListener("submit", function (event) {
 
         inputUsername.disabled = true;
         inputPassword.disabled = true;
-        submitButton.disabled = true;
         
     } else {
         displayMessage("Credenciales incorrectas, acceso denegado", "red");
