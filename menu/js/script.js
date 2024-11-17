@@ -24,3 +24,23 @@ document.getElementById("ope-matrices").addEventListener("click", function (even
     event.preventDefault();
     loadExercise("ope-matrices");
 });
+
+document.getElementById("almacena-cookies").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("almacena-cookies");
+});
+
+document.getElementById("almacena-session").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("almacena-session");
+});
+
+document.getElementById("almacena-local").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("almacena-local");
+});
+
+document.getElementById("almacena-indexedDB").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("almacena-indexedDB");
+});

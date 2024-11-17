@@ -63,6 +63,54 @@ function loadExercise(exercise) {
                   </div>
                 </div>`
                 break;
+        case 'almacena-cookies':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">CRUD con Cookies</h5>
+                    <h6 class="card-subtitle mb-2"><i>Almacenamiento</i></h6>
+                    <p class="card-text fs-8">Crud con Cookies para guardar datos clave/valor en una tabla. Además de poder actualizar y borrar estos datos.</p>
+                    <div class="text-center">
+                        <a href="./almacena/almacena-cookies/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
+        case 'almacena-session':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">CRUD con SessionStorage</h5>
+                    <h6 class="card-subtitle mb-2"><i>Almacenamiento</i></h6>
+                    <p class="card-text fs-8">Crud con SessionStorage para guardar datos en una tabla. Además de poder eliminar y actualizar estos datos.</p>
+                    <div class="text-center">
+                        <a href="./almacena/almacena-session/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
+        case 'almacena-local':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">CRUD con LocalStorage</h5>
+                    <h6 class="card-subtitle mb-2"><i>Almacenamiento</i></h6>
+                    <p class="card-text fs-8">Crud con LocalStorage para guardar datos en una tabla. Además de poder eliminar y actualizar estos datos.</p>
+                    <div class="text-center">
+                        <a href="./almacena/almacena-local/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
+        case 'almacena-indexedDB':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">CRUD con IndexedDB</h5>
+                    <h6 class="card-subtitle mb-2"><i>Almacenamiento</i></h6>
+                    <p class="card-text fs-8">Crud con IndexedDB para almacenar datos en una tabla y poder tanto actualizarlos como eliminarlos. Además de tener la posibilidad de generar datos traídos desde una api.</p>
+                    <div class="text-center">
+                        <a href="./almacena/almacena-indexedDB/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
                 default:
     };
 };

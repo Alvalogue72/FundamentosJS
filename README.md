@@ -1,11 +1,22 @@
 <h1>Fundamentos JS (ES6)</h1>
 
 <h2>🚀 Últimas Actualizaciones</h2>
-<h6>🔑 Login con Formulario con control de sesión - IndexedDB</h6>
-<p>Formulario de login con validaciones mediante expresiones regulares, tanto para el usuario como para la contraseña. Cuando los datos no son válidos se muestran mensajes de errores, que desaparecen automáticamente cuando el usuario corrige los campos usando eventos. Validación de credenciales de usuario y  se controla las sesiones utilizando IndexedDB. Una vez que el usuario inicia sesión correctamente, se almacena un valor en en la base de datos creada para mantener la sesión activa hasta que el usuario cierre sesión mediante el boton de logout.</p>
-<h6>➗ Array - Operaciones con matrices</h6>
-<p>Realiza operaciones básicas con matrices cuadradas generadas aleatoriamente, introduciendo valores de rangos por el usuario o de manera también aleatoria. Se incluyen suma, resta y multiplicación de matrices. Además, el programa permitirá realizar pruebas automáticas repetidas, gnerando matrices y el resultado de la operación de manera sistemática a lo largo del tiempo pudiendo aumentar su velocidad o disminuirla hasta que el usuario pulse el botón de parar.</p>
-<img src="./img/opematrices.jpg">
+<h6>🗂️ Crud con IndexedDB</h6>
+<p>Crud con IndexedDB para guardar personajes, con su nombre, especie y una imágen de estos en una tabla generada a partir de los datos que contiene la base de datos de IndexedDB. Además se pueden grabar datos usando los botones +1 y +5, los cuáles taeran aleatoriamente uno o cinco personaje de la serie Ricky y Morty haciendo uso de una api.
+La tabla también incluye botones de eliminar y actualizar cada una de las filas de esta.</p>
+<img src="./img/almacenaIndexedDB.jpg">
+
+<h6>🗂️ Crud con Cookies</h6>
+<p>Crud con Cookies que permite guardar en una tabla pares nombre/valor durante 1 minuto, también en cada fila de la tabla se dispone de botones de borrar y acutalizar estos datos.</p>
+<img src="./img/almacenaCookies.jpg">
+
+<h6>🗂️ Crud con SessionStorage</h6>
+<p>Crud son SessionStorage para guardar datos con los campos nombre, ciudad y país. Pudiendo tanto aliminarlos como actualizarlos usando los botones de la tabla.</p>
+<img src="./img/almacenaSession.jpg">
+
+<h6>🗂️ Crud con LocalStorage</h6>
+<p>Crud son LocalStorage para guardar datos con los campos nombre, ciudad y país. Pudiendo tanto aliminarlos como actualizarlos usando los botones de la tabla.</p>
+<img src="./img/almacenaLocal.jpg">
 
 <h6>🎨 Modificación Estilo</h6>
 <p>Cambio de estilo en el login y en los backgrounds de cada página</p>

@@ -1,0 +1,145 @@
+main {
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    margin: 60px;
+    border: 2px solid #a2a2a2;
+    border-radius: 7px;
+    padding: 0 27px 15px 27px;
+}
+
+main h3 {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background: #a2a2a2;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #212121;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+}
+
+.group__label {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.group__input {
+    width: 100%;
+    padding: 5px;
+    color: #EEEEEE;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #EEEEEE;
+    border-radius: 20px;
+}
+
+.group__input:focus + .group__label, .group__input:not(:placeholder-shown) + .group__label {
+    background-color: #EEEEEE;
+    color: #333;
+    padding: 1px 10px;
+    border-radius: 20px;
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+/* Estilo general para los botones */
+.btns {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Botón de Guardar */
+.button-save {
+    background-color: #28a745; 
+    color: white;
+}
+
+.button-save:hover {
+    background-color: #218838; 
+    transform: scale(1.05);
+}
+
+/* Botón de Actualizar */
+.button-update {
+    background-color: #ffc107;
+    color: #212529; 
+}
+
+.button-update:hover {
+    background-color: #e0a800; 
+    transform: scale(1.05);
+}
+
+/* Botón de Borrar */
+.button-delete {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.button-delete:hover {
+    background-color: #c82333; 
+    transform: scale(1.05);
+}
+
+/* Estilo para los botones de añadir (+1 y +5) */
+.add-buttons {
+    margin: 20px 0 0 5px;
+}
+
+.add-buttons button {
+    margin: 0 10px;
+}
+
+.button-add {
+    background-color: #007bff;
+    color: white; 
+}
+
+.button-add:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+td:first-child + td {
+    padding-left: 10px; /* Reduce el espacio entre la primera y segunda columna */
+}
+
+td {
+    padding: 10px; /* Espaciado general */
+}
+
+td:last-child, td:nth-last-child(2) {
+    text-align: right; /* Alinea las dos últimas columnas a la derecha */
+}
