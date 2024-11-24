@@ -1,0 +1,83 @@
+main {
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    margin: 60px;
+    border: 2px solid #a2a2a2;
+    border-radius: 7px;
+    padding: 0 10px 15px 10px;
+}
+
+main h3 {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background: #a2a2a2;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #212121;
+}
+
+.btns {
+    margin-bottom: 15px;
+}
+
+.btns button {
+    width: 200px;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.in-btn {
+    background-color: #28a745;
+}
+
+.in-btn:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+.out-btn {
+    background-color: #dc3545;
+}
+
+.out-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilo general para los elementos <p> */
+.list p {
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Estilo para elementos en posiciones impares */
+.list p:nth-child(odd) {
+    background-color: rgba(162, 162, 162, 0.2);
+}
+
+/* Estilo para elementos en posiciones pares */
+.list p:nth-child(even) {
+    background-color: rgba(209, 209, 209, 0.3);
+}
+
+/* Borde redondeado para el primer elemento */
+.list p:first-child {
+    border-radius: 10px 10px 0 0; /* Redondeado en la parte superior */
+}
+
+/* Borde redondeado para el último elemento */
+.list p:last-child {
+    border-radius: 0 0 10px 10px; /* Redondeado en la parte inferior */
+}
+
+.list p:only-child {
+    border-radius: 10px; /* Redondeo completo */
+}

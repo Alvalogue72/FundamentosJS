@@ -1,22 +1,16 @@
 <h1>Fundamentos JS (ES6)</h1>
 
 <h2>🚀 Últimas Actualizaciones</h2>
-<h6>🗂️ Crud con IndexedDB</h6>
-<p>Crud con IndexedDB para guardar personajes, con su nombre, especie y una imágen de estos en una tabla generada a partir de los datos que contiene la base de datos de IndexedDB. Además se pueden grabar datos usando los botones +1 y +5, los cuáles taeran aleatoriamente uno o cinco personaje de la serie Ricky y Morty haciendo uso de una api.
-La tabla también incluye botones de eliminar y actualizar cada una de las filas de esta.</p>
-<img src="./img/almacenaIndexedDB.jpg">
+<h6>📦 Colada con Pila</h6>
+<p>Gestión de la colada siguiendo el modelo de una pila LIFO (Último en Entrar, Primero en Salir). Esto significa que la última prenda en añadirse será la primera en retirarse. Incluye botones para **añadir prenda** y **eliminar prenda**. La cesta tiene un límite máximo de 10 prendas.</p>
+<img src="./img/colada.jpg">
 
-<h6>🗂️ Crud con Cookies</h6>
-<p>Crud con Cookies que permite guardar en una tabla pares nombre/valor durante 1 minuto, también en cada fila de la tabla se dispone de botones de borrar y acutalizar estos datos.</p>
-<img src="./img/almacenaCookies.jpg">
+<h6>🚗 Taller con Cola</h6>
+<p>Lista de espera del taller basada en el modelo de una Cola FIFO (Primero en Entrar, Primero en Salir). Esto significa que el primer vehículo en llegar será el primero en ser atendido. Incluye botones para **recibir la llegada de un vehículo** y **atender vehículo**. La cola del taller tiene un límite máximo de 10 vehículos.</p> <img src="./img/taller.jpg">
 
-<h6>🗂️ Crud con SessionStorage</h6>
-<p>Crud son SessionStorage para guardar datos con los campos nombre, ciudad y país. Pudiendo tanto aliminarlos como actualizarlos usando los botones de la tabla.</p>
-<img src="./img/almacenaSession.jpg">
-
-<h6>🗂️ Crud con LocalStorage</h6>
-<p>Crud son LocalStorage para guardar datos con los campos nombre, ciudad y país. Pudiendo tanto aliminarlos como actualizarlos usando los botones de la tabla.</p>
-<img src="./img/almacenaLocal.jpg">
+<h6>📝 Tareas con Listas</h6>
+<p>Gestión de tareas utilizando listas. Las tareas generales se añaden pulsando el botón de **añadir**, y al pulsar el botón de **eliminar**, las tareas desaparecen de forma aleatoria. Por otro lado, las tareas prioritarias se gestionan de manera similar, pero al eliminarlas desaparecen las de mayor prioridad (es decir, con el número más bajo). Ambas listas tienen un límite máximo de 10 tareas.</p>
+<img src="./img/tareas.jpg">
 
 <h6>🎨 Modificación Estilo</h6>
 <p>Cambio de estilo en el login y en los backgrounds de cada página</p>

@@ -44,3 +44,18 @@ document.getElementById("almacena-indexedDB").addEventListener("click", function
     event.preventDefault();
     loadExercise("almacena-indexedDB");
 });
+
+document.getElementById("colada").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("colada");
+});
+
+document.getElementById("taller").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("taller");
+});
+
+document.getElementById("tareas").addEventListener("click", function (event) {
+    event.preventDefault();
+    loadExercise("tareas");
+});

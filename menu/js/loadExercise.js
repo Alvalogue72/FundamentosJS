@@ -111,6 +111,42 @@ function loadExercise(exercise) {
                   </div>
                 </div>`
                 break;
+        case 'colada':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">Colada con Pila</h5>
+                    <h6 class="card-subtitle mb-2"><i>Estructuras</i></h6>
+                    <p class="card-text fs-8">Cesta de colada utilizando una Pila siguiendo la lógica Last In, First Out. Pulsar en los botones para agregar y eliminar prendas.</p>
+                    <div class="text-center">
+                        <a href="./estructuras/colada/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
+        case 'taller':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">Taller con Cola</h5>
+                    <h6 class="card-subtitle mb-2"><i>Estructuras</i></h6>
+                    <p class="card-text fs-8">Espera de un taller utilizando una Cola sigueindo la lógica First In, First Out. Pulsar en los botones para recibir y atender vehículos.</p>
+                    <div class="text-center">
+                        <a href="./estructuras/taller/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
+        case 'tareas':
+            mainContent.innerHTML = `<div class="w-18rem zoom2 bg-blur p-3 border rounded">
+                  <div class="card-body">
+                    <h5 class="card-title">Tareas con Lista</h5>
+                    <h6 class="card-subtitle mb-2"><i>Estructuras</i></h6>
+                    <p class="card-text fs-8">Lista de tareas con botones añadir y eliminar aleatoriamente una tarea. Y lista de tareas con prioridades eliminadas por dicho orden.</p>
+                    <div class="text-center">
+                        <a href="./estructuras/tareas/index.html" class="text-decoration-none button d-inline-block">Solución</a>
+                    </div>
+                  </div>
+                </div>`
+                break;
                 default:
     };
 };
